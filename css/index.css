@@ -1,0 +1,1092 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box ;
+    font-family: 'Do Hyeon', sans-serif;
+    
+}
+.wrapper{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 2;
+}
+
+.wrapper2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 2;
+    background-color: #000;
+
+}
+a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+
+
+
+    }
+body, html{
+    width: 100%;
+    height: 200vh;
+    background-color: white;
+    /*background-image: url(../media/background-pic.png);
+    background-repeat: no-repeat;
+    background-size: cover;*/
+
+    
+}
+/*Header*/
+
+.header{
+ 
+
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+   
+}
+.header-shit{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    padding: 10px;
+    
+    
+}
+
+.header-shit2{
+  display: flex;
+  
+  
+  padding: 10px;
+  background-color: black;
+  
+  
+}
+.logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    
+    padding-right: 25px;
+    
+}
+/*Menu*/
+
+nav{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    
+    padding-top: 30px;
+    
+    
+}
+
+
+
+
+
+.dropbtn{
+    
+   display: flex;
+   justify-content: center;
+   align-self: center;
+    font-size: 2em;
+    font-weight: bold;
+    padding: 10px;
+    border: 4px black solid;
+    width: 150px;
+    
+    background-color: white;
+    border-radius: 5em;
+    box-shadow: 0px 8px 10px 0px rgba(0,0,0,0.2);
+}
+
+
+.dropcontent{
+    
+    display: none;
+    position: absolute;
+    align-self: center;
+    
+    
+    }
+
+
+.dropdown:hover .dropcontent {
+    display: block;
+    animation-name: menudisplay ;
+    animation-duration: 2s;
+    z-index:1;
+    font-size: 1.5em;
+}
+
+
+
+
+
+ul{
+    display: block;
+    width:auto;
+    list-style-type: none;
+    padding-left:15px;
+    padding-top: 10px;
+    
+
+}
+
+/*Cursor*/
+
+
+.inner-c{
+    position: fixed;
+    left:10px;
+    width:10px;
+    height: 10px;
+    transform: translate(-50%,-50%);
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    mix-blend-mode: difference;
+    pointer-events: none;
+    z-index: 1;
+    
+
+}
+.inner-c.grow{
+    width: 25px;
+    height: 25px;
+    transition: width 0.5s, height 0.5s;
+    z-index: 1;
+}
+
+.outer-cursor{
+    position: fixed;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+    transform: translate(-50%,-50%);
+    border: 1px solid rgb(243, 239, 239);
+    mix-blend-mode: difference;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1;
+    
+
+}
+.hidden > .bubble-in{
+    display: none;
+    
+
+    z-index: 1;
+}
+.bubble-in{
+    
+    position: fixed;
+    left: 100px;
+    width: 150px;
+    height: 50px;
+    transform: translate(-50%,-50%);
+    border: 2px solid black;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    pointer-events: none;
+    z-index: 1;
+    font-size: 0.75em;
+    color: black;
+    text-align: center;
+    padding-top: 15px;
+    transition: width 0.5s, height 0.5s;
+    mix-blend-mode: difference;
+    
+
+    
+}
+
+/*boxes/ circles  main pages*/
+.mainpage{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    
+    width: 100%;
+    
+    
+}
+
+.boxes{
+    
+    position: relative;
+    width: 120vh;
+    height: 120vh;
+    
+
+  
+    
+    
+}
+
+.boxes2{
+  -webkit-filter: invert(1);
+   filter: invert(1);
+   position: relative;
+    width: 120vh;
+    height: 120vh;
+}
+
+
+.box {
+    position: absolute;
+    top:17vh;
+    right: 50vh;
+    animation-name: wigle;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    background-image:url(../media/box1.png);
+    background-size: 150%;
+    background-position: -30px, -100px;
+    background-position-y: -40px;
+    max-width: 120vh;
+    
+    border-radius: 52% 48% 45% 55% / 47% 51% 49% 53%;
+    height: 180px;
+    width: 180px;
+    
+    
+    
+
+    
+  }
+  .box:hover{
+    animation-name: shapechange ;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+   
+
+  }
+
+  .box2 {
+    position: absolute;
+    top:28vh;
+    right: 67vh;
+    background-color: wheat;
+    animation-name: wigle;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    background-image: url(../media/web2.png);
+    background-position: center;
+    background-size: 170%;
+    background-repeat:no-repeat ;
+    background-position: -50px, -100px;
+    background-position-y: -70px;
+    box-shadow: rgb(211, 210, 210) 10px 5px 10px;
+    border-radius: 52% 48% 45% 55% / 47% 51% 49% 53%;
+    
+    height: 180px;
+    
+    width: 180px;
+  }
+  
+  .box2:hover{
+    animation-name: shapechange ;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    
+  }
+ 
+  
+  
+  .box3 {
+    position: absolute;
+    top:28vh;
+    right: 32vh;
+    
+    background-image: url(../media/web3.png);
+    background-position: center;
+    background-size: 140%;
+    background-repeat:no-repeat ;
+    background-position: -30px, -100px;
+    background-position-y: -55px;
+    animation-name: wigle;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    
+    box-shadow: rgb(211, 210, 210) 10px 5px 10px;
+    border-radius: 52% 48% 45% 55% / 47% 51% 49% 53%;
+    
+    height: 180px;
+    
+    width: 180px;
+
+
+  }
+  .box3:hover{
+    animation-name: shapechange ;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    
+  }
+
+  
+  .box4 {
+    position: absolute;
+    top:48vh;
+    right: 67vh;
+    background-image: url(../media/web4.png);
+ 
+    background-position: center;
+    background-size: 115%;
+    background-repeat:no-repeat ;
+    background-position: -10px, -100px;
+    background-position-y: -50px;
+    background-color: wheat;
+    animation-name: wigle;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    
+    box-shadow: rgb(211, 210, 210) 10px 5px 10px;
+    border-radius: 52% 48% 45% 55% / 47% 51% 49% 53%;
+    
+    
+    height: 180px;
+    
+    width: 180px;
+    }
+
+    .box4:hover{
+      animation-name: shapechange ;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+      
+    }
+    .box5 {
+        position: absolute;
+        top:48vh;
+        right: 32vh;
+        background-color: wheat;
+        background-image: url(../media/web5.png);
+        background-position: center;
+        background-size: 122%;
+        background-repeat:no-repeat ;
+        background-position: -25px, -100px;
+        background-position-y: -88px;
+        animation-name: wigle;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        
+        box-shadow: rgb(211, 210, 210) 10px 5px 10px;
+        border-radius: 52% 48% 45% 55% / 47% 51% 49% 53%;
+        
+        height: 180px;
+        
+        width: 180px;
+        }
+ .box5:hover{
+     animation-name: shapechange ;
+     animation-duration: 4s;
+     animation-iteration-count: infinite;
+   
+ }
+      
+    .box6 {
+        position: absolute;
+        top:60vh;
+        right: 49vh;
+        background-color: wheat;
+        background-image: url(../media/web6.png);
+        background-position: center;
+        background-size: 140%;
+        background-repeat:no-repeat ;
+        background-position: -30px, -100px;
+        background-position-y: -70px;
+        animation-name: wigle;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        
+        box-shadow: rgb(211, 210, 210) 10px 5px 10px;
+        border-radius: 52% 48% 45% 55% / 47% 51% 49% 53%;
+        
+        height: 180px;
+        
+        width: 180px;
+        }
+        .box6:hover{
+          animation-name: shapechange ;
+          animation-duration: 4s;
+          animation-iteration-count: infinite;
+          
+        }
+        
+      .fontsize{
+        display: flex;
+        justify-content: center;
+        align-self: center;
+         font-size: 1em;
+         font-weight: bold;
+         padding: 10px;
+         border: 4px black solid;
+         width: 100px;
+         transform: translate(-50%, -50%);
+         
+         background-color: white;
+         border-radius: 5em;
+         box-shadow: 0px 8px 10px 0px rgba(0,0,0,0.2);
+      }
+
+   
+  /*Animations*/
+
+  @keyframes menudisplay {
+    0%{
+        opacity:0
+    }
+    100%{
+        opacity:100
+    }
+    
+  }
+
+ @keyframes shapechange
+ {
+    0%{
+        rotate: 0deg;
+        border-radius:52% 48% 45% 55% / 47% 51% 49% 53% ;
+    }
+
+
+    
+
+    25%{
+        border-radius: 69% 31% 65% 35% / 39% 66% 34% 61%;
+    }
+    
+    50%{
+        rotate: 100deg;
+        border-radius:52% 48% 45% 55% / 47% 51% 49% 53%;
+
+    }
+
+    75%{rotate: 0deg;
+        border-radius: 55% 30% 56%/69% 41% 33% 47%;
+    }
+
+    100%{
+        rotate: -90deg;
+        border-radius:52% 48% 45% 55% / 47% 51% 49% 53%;
+
+    }
+  }
+
+  @keyframes wigle {
+    0%{
+        
+        border-radius:52% 48% 45% 55% / 47% 51% 49% 53% ;
+    }
+
+    50%{
+        border-radius: 30% 40% 40% 45% / 40% 45% 42% 48% ;;
+
+    }
+
+    100%{
+        border-radius: 52% 48% 45% 55% / 47% 51% 49% 53% ;
+
+    }
+
+
+    
+  }
+  /*/ WORKS PAGE*/
+
+  .workpics{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    
+    padding: 50px;
+    
+    
+  }
+  .workpic{
+    width: 50%;
+   
+  }
+  .workpic img{
+    width: 500px;
+    margin: 20px;
+    object-fit: cover;
+    
+
+  }
+
+  /*/ PRODUCTS PAGE*/
+
+  .maintext-products{
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+   
+    
+    padding-left: 30px;
+    ;
+    
+  }
+
+  .maintext-products h2{
+    font-size: 5em;
+    color: black;
+    
+  }
+
+  .maintext-products span{
+    color: white;
+    background-color: black;
+    font-size: 3em;
+    padding: 30px;
+    
+  }
+
+  .maintext-products h3{
+    font-weight: 100;
+    color: rgb(199, 195, 195);
+    font-size: 2em;
+    margin-bottom: 150px;
+  }
+
+
+  .pbox{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+    padding: 40px;
+    
+    margin-left: 0;
+    border-top: solid 2px;
+    padding: 30px;
+
+    
+  }
+  .pbox img{
+    min-width:400px
+    
+  }
+
+  .products{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 20px;
+    
+    
+    
+}
+
+.product-name{
+    
+    font-size: 1.5em;
+    padding-left: 30px;
+    position: relative;
+    color: black;
+    top: -20px;
+    left: 50px;
+    width: 100%;
+} 
+
+
+  .productpics
+  {
+    
+    width: 400px;
+    height: 425px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    
+    
+    }
+   
+  
+    
+    
+.productpics1{
+   
+    
+    width: 350px;
+    height: 425px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+   
+  }
+
+.productpics2{
+    
+    width: 400px;
+    height: 425px;
+    position: relative;
+    
+    border-radius: 50%;
+}
+
+
+
+.productpics3{
+    
+    width: 400px;
+    height: 425px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10%;
+    align-content: center;
+     
+    
+   
+  
+}
+
+
+  .attempt23{
+    max-width: 100%;
+    max-height: 100%;
+    
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    object-position: 10px, 100px;
+    overflow: hidden;
+    display: block;
+    aspect-ratio: auto 1/1;
+    transition:transform 0.25s ease;
+    cursor: pointer;
+
+    }
+    
+    .attempt23:hover {
+        -webkit-transform:scale(1.3); /* or some other value */
+        transform:scale(1.2)
+        
+    }
+
+  
+
+  
+
+
+  .products2{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+  }
+
+  
+    
+    
+
+  
+  
+
+
+  /* CONTACT FORM */
+ 
+/* contact form */
+.wrapper1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 50px;
+  
+  
+}
+
+/* Form */
+.wrapper1{
+  display: flex;
+  flex-direction: column-reverse;
+}
+.wrapper2 {
+  width: 120vh;
+  height: auto;
+  background-color: #fffefe;
+  
+  padding: 20px;
+  border-radius: 10px;
+}
+.midpic{
+  display: flex;
+  justify-content: flex-end;
+  flex-direction:column-reverse;
+  
+}
+.midpic img{
+  width: 500px;
+  display: flex;
+  flex-direction: column-reverse;
+  
+}
+
+
+.wrapper2 label {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.wrapper2 input[type="text"],
+.wrapper2 input[type="email"],
+.wrapper2 textarea {
+  width: 60%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.wrapper2 textarea {
+  height: 100px;
+  justify-self: right;
+  transition-duration: 5s;
+}
+
+.wrapper2 input[type="submit"] {
+  background-color: #713880;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  width: 150px;
+}
+
+.wrapper2 input[type="submit"]:hover {
+  background-color: #4e1d47;
+  
+}
+
+.wrapper2 input[type="submit"]:focus {
+  outline: none;
+}
+
+
+  
+  /* About me page */
+
+  .maintext{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+   
+    padding-top: 150px;
+    padding-left: 30px;
+    font-family: 'Do Hyeon';
+    color: rgb(0, 0, 0);
+   
+}
+.maintext h2{
+    width: 100%;
+    font-size: 5em;
+    color: white;
+    
+  }
+  .maintext span{
+    
+    font-size: 4em;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    opacity: 0;
+    padding: 20px;
+  }
+
+  .maintext h3{
+    font-size: 2em;
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+  }
+
+.me-pic{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  
+  padding: 50px;
+  border-radius: 50%;
+
+}
+  .me-info p{
+    color: #ffffff;
+    font-size: 1.5em;
+    display: flex;
+    flex-direction: column;
+    
+   
+    
+
+    margin-top: 10px;
+    width: 100%;
+  }
+
+
+
+
+  /* work page */
+
+
+   /* work page */
+  footer{
+    
+    
+    display: flex;
+    justify-self: end;
+    background-color: rgb(248, 248, 248);
+    
+}
+
+/* Media Queries */
+
+/* Mobile */
+
+/* home page */
+@media (max-width: 768px) {
+  .header-shit {
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+  }
+
+  .logo {
+      justify-content: center;
+      align-self: center;
+      padding-right: 0;
+  }
+
+  .dropbtn {
+      font-size: 1.5em;
+      width: 120px;
+  }
+
+  .dropcontent {
+      position: static;
+      display: block;
+      font-size: 1.5em;
+  }
+
+  .inner-c,
+  .outer-cursor {
+      display: none;
+  }
+
+  .bubble-in {
+      display: none;
+  }
+
+  .boxes,
+  .boxes2 {
+      width: 90vw;
+      height: 90vw;
+      max-width: 500px;
+      max-height: 500px;
+  }
+
+  .box,
+  .box2,
+  .box3,
+  .box4,
+  .box5{
+    display: none;
+  }
+
+  .box6 {
+      top: 15vw;
+      right: 50%;
+      transform: translate(50%, -50%);
+      height: 250px;
+      width: 250px;
+      margin-top: 100px;
+      background-position: -40px;
+  }
+  
+    
+
+  
+
+  .fontsize {
+      font-size: 1.5em;
+      width: 120px;
+  }
+
+  /* products page */
+
+  .workpic img {
+      display: flex;
+      width: 100%;
+      margin: 20px 0;
+  }
+  
+  .maintext-products h2 {
+      font-size: 3em;
+  }
+  .maintext-products h3 {
+    margin-top: 30px;
+}
+
+  .maintext-products span {
+      font-size: 2em;
+      padding: 20px;
+  }
+
+  .maintext-products h3 {
+      font-size: 1.5em;
+      margin-bottom: 100px;
+  }
+
+  .pbox img {
+      min-width: auto;
+  }
+  .products2{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    justify-content: space-around;
+    
+  }
+
+  /*Works page*/
+
+  .workpics{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    
+    
+    width: 100%;
+    
+  }
+
+  .workpics img{
+    width: 25vh;
+    margin: 10px;
+    padding: 0;
+    background-color: #000;
+  }
+  
+  footer{
+    justify-content: center;
+  }
+}
+/*about me */
+
+.me-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  padding: 0px;
+  background-color: none;
+  
+}
+.me-info img{
+  width: 25vh;
+}
+
+
+
+/* Medium Screen */
+@media (min-width: 820px) and (max-width: 1180px) {
+ 
+  /* index*/
+  .wrapper {
+  
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .boxes{
+    display: flex;
+    flex-direction: column;
+   
+    
+  }
+  .mainpage{
+    display: flex;
+    flex-direction: column;
+  }
+  /* works*/
+  .workpics{
+    width: 150%;
+    
+  
+    
+  }
+  .pbox{
+    width: 50%;
+    min-width: auto;
+  }
+
+  .workpics img{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+    width: 200px;
+    min-width: auto;
+  
+
+    
+  }
+
+  .maintext-products h2 {
+    font-size: 2.5em;
+  }
+
+  .maintext-products h3 {
+    margin-top: 20px;
+  }
+
+  .maintext-products span {
+    font-size: 1em;
+    padding: 10px;
+  }
+
+  .maintext-products h3 {
+    font-size: 1em;
+    margin-bottom: 50px;
+  }
+
+  
+
+  .products2 {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+}
+
+
+
